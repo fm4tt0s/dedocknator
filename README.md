@@ -7,11 +7,17 @@ Generate Dockerfile from Docker images
 
 The purpose of this code is to quickly get a Dockerfile from an existing Docker image. Similar to what you got when run 'docker history' but a little better (I think).
 
+# Install
+
     git clone [this_repo]
     cd dedocknator
     docker build -t dedocknator .
-
+    
 This will build a local **dedocknator** image that you can use like:
+    docker run --rm -v '/var/run/docker.sock:/var/run/docker.sock' dedocknator <IMAGE_ID>
+    
+# Usage
+
     docker run --rm -v '/var/run/docker.sock:/var/run/docker.sock' dedocknator <IMAGE_ID>
     
 **You NEED to provide the image ID instead of its name**
