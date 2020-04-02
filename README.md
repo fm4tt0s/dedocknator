@@ -24,11 +24,11 @@ This will build a local **dedocknator** image that you can use like:
 
 # Example with the official ubuntu image:
 
-    [fmattos@fmattos.br.ibm.com:~]$ docker images | grep ubuntu
+    $ docker images | grep ubuntu
     REPOSITORY          TAG                 IMAGE ID            CREATED
     ubuntu              latest              c73a085dc378        12 days ago
 
-    [fmattos@fmattos.br.ibm.com:~]$ docker run  --rm -v '/var/run/docker.sock:/var/run/docker.sock' dedocknator c73a085dc378
+    $ docker run  --rm -v '/var/run/docker.sock:/var/run/docker.sock' dedocknator c73a085dc378
     FROM ubuntu:latest
     ADD file:cd937b840fff16e04e1f59d56f4424d08544b0bb8ac30d9804d25e28fb15ded3 in /
     RUN /bin/sh -c set -xe 							     \
